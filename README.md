@@ -17,4 +17,28 @@ The aim was to find statistically signficant zones and spots for taxi pickups an
 
 Technologies used are : Apache Spark, Spark SQL, Amazon EC2, Amazon S3, Scala, Sbt
 
+### Steps to Execute
 
+#### Phase 1
+To create the JAR File:
+
+ ```bash
+ sbt assembly
+ ```
+ 
+ Install Apache Spark and Run:
+ ```bash
+ ./bin/spark-submit {YOUR-JAR-FILE}.jar result/output rangequery src/resources/arealm10000.csv -93.63173,33.0183,-93.359203,33.219456 rangejoinquery src/resources/arealm10000.csv src/resources/zcta10000.csv distancequery src/resources/arealm10000.csv -88.331492,32.324142 1 distancejoinquery src/resources/arealm10000.csv src/resources/arealm10000.csv 0.1
+```
+
+#### Phase 2
+To create the JAR File:
+
+ ```bash
+ sbt assembly
+ ```
+ 
+To submit the code to Spark run:
+```bash
+./bin/spark-submit {YOUR-JAR-FILE}.jar test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv
+```
