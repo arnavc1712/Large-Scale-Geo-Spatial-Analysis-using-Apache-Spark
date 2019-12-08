@@ -3,7 +3,7 @@
 
 The project was aimed to conduct Large Scale Geo-Spatial Analysis of the NYC Taxi Trip Dataset - https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
-The aim was to find statistically signficant zones and spots for taxi pickups and drops in spatial temporal domain using Apache Spark and Spark SQL.
+The aim was to find statistically signficant zones and spots for taxi pickups and drops in spatial temporal domain using Apache Spark and Spark SQL. http://sigspatial2016.sigspatial.org/giscup2016/problem
 
 - An Apache spark cluster was set up using Amazon EC2 Instances
 - Apache Spark Standalone Cluster was used as the cluster manager
